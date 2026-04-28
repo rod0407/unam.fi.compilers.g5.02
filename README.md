@@ -5,7 +5,7 @@ Este proyecto implementa un Analizador Sintáctico (Parser) y un Analizador Sem�
 ## Arquitectura de Software
 Para maximizar el rendimiento y aplicar buenas prácticas de ingeniería, el sistema divide sus responsabilidades:
 1. **Backend en C (`parser.c`):** Actúa como el Analizador Léxico y el Parser Top-Down. Lee la entrada, verifica la gramática y construye un Árbol de Sintaxis Abstracta (AST) en la memoria utilizando punteros. Si la estructura es correcta, serializa el AST en formato JSON.
-2. **Frontend y SDT en Python (`main.py`):** Ejecuta la interfaz gráfica moderna (CustomTkinter), orquesta la ejecución del ejecutable en C mediante subprocesos y recibe el JSON. Finalmente, recorre el árbol para aplicar las reglas de la Traducción Dirigida por Sintaxis (Type Checking).
+2. **Frontend y SDT en Python (`main.py`):** Ejecuta una interfaz gráfica y orquesta la ejecución del ejecutable en C mediante subprocesos y recibe el JSON. Finalmente, recorre el árbol para aplicar las reglas de la Traducción Dirigida por Sintaxis (Type Checking).
 
 ## Ejecución del Proyecto
 1. Crear el entorno virtual: `python -m venv venv`
